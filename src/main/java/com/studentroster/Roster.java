@@ -25,6 +25,18 @@ public class Roster {
         this.roster = new Student[ROSTER_INCREASE_SIZE];
     }
 
+    public int getRosterSize() {
+        return this.size;
+    }
+
+    public int getRosterLength() {
+        return roster.length;
+    }
+
+    public Student getRosterStudent(int index) {
+        return roster[index];
+    }
+
     /**
      * Searchs through the roster to find the student
      * @param student Target student
@@ -256,7 +268,7 @@ public class Roster {
      * and sorts the array in ascending order.
      * @return sorted array containing all the indexed dates of the albums in the roster.
      */
-    private int[] genDateArray()
+    int[] genDateArray()
     {
         int[] tempArr = new int[size];
         int arrIndex = 0;
