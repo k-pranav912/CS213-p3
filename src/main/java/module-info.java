@@ -1,4 +1,4 @@
-module com.studentroster.cs213p3 {
+module com.studentroster {
     requires javafx.controls;
     requires javafx.fxml;
 
