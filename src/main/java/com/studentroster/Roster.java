@@ -187,59 +187,6 @@ public class Roster {
     }
 
     /**
-     * Prints the roster of students
-     */
-    public void printRoster() {
-        if (size <= 0) {
-            System.out.println("Student roster is empty!");
-            return;
-        }
-        System.out.println("* list of students in the roster **");
-        for (int i = 0; i < roster.length; i++) {
-            if (roster[i] != null) System.out.println(roster[i]);
-        }
-        System.out.println("* end of roster **");
-    }
-
-    /**
-     * Prints the roster of students, sorted by their names
-     */
-    public void printByName() {
-        if (size <= 0) {
-            System.out.println("Student roster is empty!");
-            return;
-        }
-
-        String[] result = new String[size];
-
-        System.out.println("* list of students ordered by name **");;
-        int counterIndex = 0;
-        for (int i = 0; i < roster.length; i++) {
-            if (roster[i] != null) {
-                result[counterIndex] = roster[i].toString();
-                counterIndex++;
-            }
-        }
-
-        for(int i = 0; i < result.length; i++) {
-            for (int j = i + 1; j < result.length; j++) {
-                if(result[i].compareTo(result[j]) > 0) {
-                    String temp = result[i];
-                    result[i] = result[j];
-                    result[j] = temp;
-                }
-            }
-        }
-
-        for (int i = 0; i < result.length; i++) {
-            System.out.println(result[i]);
-        }
-
-        System.out.println("* end of roster **");
-
-    }
-
-    /**
      * Method to check if a certain value (key) exists in the integer array.
      * @param arr Integer array
      * @param key Integer value

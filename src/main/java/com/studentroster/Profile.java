@@ -47,14 +47,4 @@ public class Profile {
     public String toString() {
         return this.name + ":" + this.major;
     }
-
-    public static void main(String[] args) {
-        Major m1 = Major.toMajor("CS");
-        Profile p1 = new Profile("pranav", m1);
-
-        Major m2 = Major.toMajor("CS");
-        Profile p2 = new Profile("pranav", m2);
-
-        System.out.println(p1.equals(p2));
-    }
 }
