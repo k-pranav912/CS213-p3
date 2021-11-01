@@ -5,8 +5,6 @@ import javafx.scene.control.*; //CHANGE THESE
 import javafx.scene.layout.HBox;
 import javafx.event.ActionEvent;
 
-import java.util.StringTokenizer;
-
 public class MainController {
 
     @FXML
