@@ -302,9 +302,11 @@ public class Roster {
         return tempArr;
     }
 
+
     /**
      * Prints the roster of students, sorted by their last payment date
      */
+
     public void printByDate()
     {
         if (size <= 0)
