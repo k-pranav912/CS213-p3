@@ -1,7 +1,7 @@
 package com.studentroster;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.*; //CHANGE THESE
+import javafx.scene.control.*; //Delete unneccessary stuff
 import javafx.scene.layout.HBox;
 import javafx.event.ActionEvent;
 
