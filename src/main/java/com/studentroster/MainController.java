@@ -373,7 +373,7 @@ public class MainController {
                                                                           + dateUnformatted.substring(0, 4);
         Date date = new Date(dateFormatted);
         if (!date.isValid()) {
-            textArea0.appendText("Payment date invalid");
+            textArea0.appendText("Payment date invalid.\n");
             return null;
         }
         return date;
