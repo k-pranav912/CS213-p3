@@ -9,6 +9,7 @@ import java.io.IOException;
 
 /**
  * The Main class, which handles setting up and running the GUI
+ * @author Neel Prabhu, Saipranav Kalapala
  */
 public class Main extends Application {
 

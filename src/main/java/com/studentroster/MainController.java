@@ -13,6 +13,7 @@ import javafx.event.ActionEvent;
 /**
  * The MainController class, which acts as the brain of the GUI. Handles all GUI inputs and outputs,
  * running the appropriate methods from the Roster class when needed.
+ * @author Neel Prabhu, Saipranav Kalapala
  */
 public class MainController {
 
