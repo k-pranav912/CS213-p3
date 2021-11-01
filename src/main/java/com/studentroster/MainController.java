@@ -173,6 +173,9 @@ public class MainController {
         {
             textArea0.appendText("Credit hours exceed the maximum " + Student.getMaxCredits() + ".\n");
             return -1;
+        } else if (isInternational == true && t0AbroadCheckbox.isSelected() && credits != 12) {
+            textArea0.appendText("Study abroad students must take 12 credits.\n");
+            return -1;
         }
         return credits;
     }
