@@ -11,19 +11,7 @@ public class MainController {
     private TextArea textArea0;
 
     @FXML
-    private Tab t0;
-
-    @FXML
     private CheckBox t0AbroadCheckbox;
-
-    @FXML
-    private Button t0AddStudentButton;
-
-    @FXML
-    private RadioButton t0BARadio;
-
-    @FXML
-    private RadioButton t0CSRadio;
 
     @FXML
     private RadioButton t0CTRadio;
@@ -32,25 +20,10 @@ public class MainController {
     private TextField t0CreditField;
 
     @FXML
-    private RadioButton t0EERadio;
-
-    @FXML
-    private RadioButton t0ITRadio;
-
-    @FXML
-    private HBox t0InternationalHbox;
-
-    @FXML
     private RadioButton t0InternationalRadio;
 
     @FXML
-    private RadioButton t0MERadio;
-
-    @FXML
     private ToggleGroup t0MajorGroup;
-
-    @FXML
-    private HBox t0MajorHbox;
 
     @FXML
     private RadioButton t0NYRadio;
@@ -61,29 +34,12 @@ public class MainController {
     @FXML
     private RadioButton t0NoResidentRadio;
 
-    @FXML
-    private Button t0RemoveStudentButton;
-
-    @FXML
-    private ToggleGroup t0ResidencyGroup;
-
-    @FXML
-    private HBox t0ResidencyHbox;
 
     @FXML
     private RadioButton t0ResidentRadio;
 
     @FXML
-    private ToggleGroup t0TristateGroup;
-
-    @FXML
-    private HBox t0TristateHbox;
-
-    @FXML
     private RadioButton t0TristateRadio;
-
-    @FXML
-    private Button t0TuitionDueButton;
 
     @FXML
     private TextField t0TuitionField;
@@ -95,37 +51,7 @@ public class MainController {
     private TextField t1AidField;
 
     @FXML
-    private HBox t1AidHbox;
-
-    @FXML
-    private Button t1AidSetButton;
-
-    @FXML
-    private RadioButton t1BARadio;
-
-    @FXML
-    private RadioButton t1CSRadio;
-
-    @FXML
-    private Button t1DatePayButton;
-
-    @FXML
-    private DatePicker t1DatePicker;
-
-    @FXML
-    private RadioButton t1EERadio;
-
-    @FXML
-    private RadioButton t1ITRadio;
-
-    @FXML
-    private RadioButton t1MERadio;
-
-    @FXML
     private ToggleGroup t1MajorGroup;
-
-    @FXML
-    private HBox t1MajorHbox;
 
     @FXML
     private TextField t1NameField;
@@ -134,31 +60,7 @@ public class MainController {
     private TextField t1PaymentAmountField;
 
     @FXML
-    private HBox t1PaymentDateHBox;
-
-    @FXML
-    private Tab t2;
-
-    @FXML
-    private MenuItem t2CalculateTuitionMenuItem;
-
-    @FXML
-    private MenuBar t2MenuBar;
-
-    @FXML
-    private Menu t2PrintMenu;
-
-    @FXML
-    private MenuItem t2RosterMenuItem;
-
-    @FXML
-    private MenuItem t2RosterNameMenuItem;
-
-    @FXML
-    private MenuItem t2RosterPaymentMenuItem;
-
-    @FXML
-    private Menu t2TuitionMenu;
+    private DatePicker t1DatePicker;
 
     private Roster studentRoster;
 
