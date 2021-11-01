@@ -320,7 +320,7 @@ public class TuitionManager {
         Date lastPaymentDate = checkDate(strTokens);
         if (lastPaymentDate == null) return;
 
-        if (studentRoster.pay(student, payment, lastPaymentDate) == false) {
+        if (studentRoster.pay(student, payment, lastPaymentDate) < 0) {
             System.out.println("Amount is greater than amount due.");
         }
         else System.out.println("Payment applied.");
@@ -338,7 +338,7 @@ public class TuitionManager {
 
         Student student = new Student(profile);
 
-        if (studentRoster.setAbroad(student) == false) {
+        if (studentRoster.setAbroad(student, true) == false) {
             System.out.println("Couldn't find the international student.");
         }
         else System.out.println("Tuition updated.");

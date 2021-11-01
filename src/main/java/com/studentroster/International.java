@@ -34,11 +34,14 @@ public class International extends NonResident{
     /**
      * Setter method to set the study-abroad status of an international student.
      */
-    public void setStudyAbroadStatusTrue() {
-        this.isStudyAbroad = true;
-        if (this.getCreditHours() > MIN_INTERNATIONAL_CREDITS) this.setCreditHours(MIN_INTERNATIONAL_CREDITS);
-        this.resetTuitionPaid();
-        this.tuitionDue = ADDITIONAL_FEE + getUniversityFeeFullTime();
+    public void setStudyAbroadStatus(boolean value) {
+        this.isStudyAbroad = value;
+
+        if (value) {
+            if (this.getCreditHours() > MIN_INTERNATIONAL_CREDITS) this.setCreditHours(MIN_INTERNATIONAL_CREDITS);
+            this.resetTuitionPaid();
+            this.tuitionDue = ADDITIONAL_FEE + getUniversityFeeFullTime();
+        }
     }
 
     /**

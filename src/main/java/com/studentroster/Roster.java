@@ -16,6 +16,8 @@ public class Roster {
     public static final int NOT_RESIDENT = -2;
     public static final int PARTTIME = -3;
     public static final int ALREADY_AWARDED = -4;
+    public static final int PAYMENT_INVALID = -5;
+
 
     /**
      * Constructor method that initializes a Roster instance.
@@ -116,18 +118,31 @@ public class Roster {
     }
 
     /**
+     * Calculates the individual tuition due of student
+     * @param student Student who's tuition is to be calculated
+     * @return tuition due if student is roster, false otherwise
+     */
+    public double calculateIndividual(Student student) {
+        int calcIndex = find(student);
+        if (calcIndex < 0) return -1;
+        roster[calcIndex].tuitionDue();
+        return roster[calcIndex].getTuition();
+    }
+
+    /**
      * Pays some/all of the tuition of the student in question, if the payment is less than or equal to the tuition due
      * @param student Student who's tuition is being paid
      * @param amountPaid Amount of tuition being paid
      * @param newPayment Date of the new payment
      * @return true if the pay was successful, false if the payment was greater than the amount of tuition required
      */
-    public boolean pay(Student student, double amountPaid, Date newPayment) {
+    public int pay(Student student, double amountPaid, Date newPayment) {
         int studentIndex = find(student);
-        if (amountPaid > roster[studentIndex].getTuition()) return false;
+        if (studentIndex < 0) return NOT_IN_ROSTER;
+        if (amountPaid > roster[studentIndex].getTuition()) return PAYMENT_INVALID;
         roster[studentIndex].addTuitionPaid(amountPaid, newPayment);
         roster[studentIndex].tuitionDue();
-        return true;
+        return SUCCESS;
     }
 
     /**
@@ -135,11 +150,11 @@ public class Roster {
      * @param student Student to be set to studying abroad
      * @return true if successful, false if the student was not an international student
      */
-    public boolean setAbroad(Student student) {
+    public boolean setAbroad(Student student, boolean value) {
         int studentIndex = find(student);
         if (studentIndex < 0) return false;
         if (roster[studentIndex] instanceof International) {
-            ((International) roster[studentIndex]).setStudyAbroadStatusTrue();
+            ((International) roster[studentIndex]).setStudyAbroadStatus(value);
             return true;
         }
         return false;

@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="CS213-p3" target="17" />
+      <module name="CS213-p3" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>

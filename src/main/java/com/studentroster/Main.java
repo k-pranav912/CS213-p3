@@ -18,7 +18,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("mainView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 650, 550);
         primaryStage.setResizable(false);
-        //primaryStage.setTitle("Hello!");
+        primaryStage.setTitle("Tuition Manager");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
